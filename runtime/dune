@@ -5,7 +5,7 @@
  (name ppx_expect_runtime)
  (public_name ppx_expect.runtime)
  (libraries base stdio ppx_inline_test.runtime-lib make_corrected_file
-   expect_test_config)
- (js_of_ocaml
-  (javascript_files runtime.js))
+  expect_test_config)
+ (js_of_ocaml (javascript_files runtime.js))
+ (wasm_of_ocaml (javascript_files runtime.js) (wasm_files runtime.wat))
  (preprocess no_preprocessing))
