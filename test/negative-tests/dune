@@ -19,99 +19,100 @@
   (bash
    "rm -f *.ml.corrected 2>/dev/null; ! %{first_dep} -diff-cmd true 2> test-output")))
 
-(alias (name runtest) (deps chdir.ml.corrected.expected chdir.ml.corrected)
+(rule (alias runtest) (deps chdir.ml.corrected.expected chdir.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps comment.ml.corrected.expected comment.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps escaped_strings.ml.corrected.expected escaped_strings.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest) (deps exact.ml.corrected.expected exact.ml.corrected)
+(rule (alias runtest) (deps exact.ml.corrected.expected exact.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest) (deps exn.ml.corrected.expected exn.ml.corrected)
+(rule (alias runtest) (deps exn.ml.corrected.expected exn.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps exn_and_trailing.ml.corrected.expected exn_and_trailing.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps exn_missing.ml.corrected.expected exn_missing.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps expect_output.ml.corrected.expected expect_output.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps flexible.ml.corrected.expected flexible.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps function_with_distinct_outputs.ml.corrected.expected
   function_with_distinct_outputs.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps functor.ml.corrected.expected functor.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps missing.ml.corrected.expected missing.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps normal_strings.ml.corrected.expected normal_strings.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps semicolon.ml.corrected.expected semicolon.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps similar_distinct_outputs.ml.corrected.expected
   similar_distinct_outputs.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps spacing.ml.corrected.expected spacing.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps string_extension_syntax.ml.corrected.expected
   string_extension_syntax.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps string_padding.ml.corrected.expected string_padding.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest) (deps tag.ml.corrected.expected tag.ml.corrected)
+(rule (alias runtest) (deps tag.ml.corrected.expected tag.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps trailing.ml.corrected.expected trailing.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps trailing_in_module.ml.corrected.expected
   trailing_in_module.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps unidiomatic_syntax.ml.corrected.expected
   unidiomatic_syntax.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest)
+(rule (alias runtest)
  (deps unusual_payload_location.ml.corrected.expected
   unusual_payload_location.ml.corrected)
  (action (bash "diff -a %{deps}")))
 
-(alias (name runtest) (deps test-output.expected test-output)
+(rule (alias runtest) (deps test-output.expected test-output)
  (action (bash "diff -a %{deps}")))
+
