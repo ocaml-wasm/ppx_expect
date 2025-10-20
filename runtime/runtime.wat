@@ -35,4 +35,8 @@
       (ref.i31
          (i32.wrap_i64
             (call $caml_ml_get_channel_offset (local.get 0)))))
+
+   (func (export "ppx_expect_runtime_flush_stubs_streams")
+      (param (ref eq)) (result (ref eq))
+      (ref.i31 (i32.const 0)))
 )
